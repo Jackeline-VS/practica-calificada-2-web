@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 03 - Tienda Plantas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind custom breakpoints para coincidir con el examen -->
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "480px",
+            md: "900px",
+            lg: "1200px",
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-[#E5E2DC] text-slate-800 min-h-screen flex flex-col justify-between font-sans"
+  >
+    <!-- Top Banner -->
+    <div
+      class="bg-[#5B6038] text-white text-xs py-2 text-center flex justify-center items-center gap-2"
+    >
+      <span>15% en tu primera compra</span>
+      <button
+        class="border border-white px-2 py-0.5 rounded text-[11px] hover:bg-white hover:text-[#5B6038] transition"
+      >
+        Registrarse
+      </button>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header
+      class="bg-black text-white px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4"
+    >
+      <div class="flex gap-4 text-xs">
+        <span class="bg-orange-600 px-3 py-1 font-semibold rounded-sm"
+          >Plantas</span
+        >
+        <span class="hover:text-gray-300 cursor-pointer">Macetas</span>
+        <span class="hover:text-gray-300 cursor-pointer">Oferta</span>
+        <span class="hover:text-gray-300 cursor-pointer">Suscripciones</span>
+        <span class="hover:text-gray-300 cursor-pointer">Cuidado</span>
+      </div>
+      <h1 class="text-4xl font-serif tracking-widest my-2 md:my-0">Plantas</h1>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="cursor-pointer">👤 Entrar</span>
+        <span class="cursor-pointer">🔍</span>
+        <span class="cursor-pointer">🛒 Carrito 0</span>
+      </div>
+    </header>
+
+    <!-- Sección Recién Llegados -->
+    <main class="max-w-7xl mx-auto px-6 py-10 w-full">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-serif">Recién llegados</h2>
+        <button
+          class="bg-[#D96B27] text-white px-5 py-2 text-xs font-semibold rounded hover:bg-orange-700 transition"
+        >
+          Comprar todo
+        </button>
+      </div>
+
+      <!-- Flexbox Responsivo según especificación:
+         <480px (1 col), <900px (2 cols), <1200px (3 cols), >1200px (4 cols) -->
+      <div class="flex flex-wrap -mx-3">
+        <!-- Producto 1 -->
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
+          <div
+            class="bg-[#DFDBD3] p-4 rounded text-center flex flex-col items-center h-full justify-between group"
+          >
+            <div class="w-full relative overflow-hidden">
+              <span
+                class="absolute top-2 left-2 bg-[#4D522B] text-white text-[10px] px-2 py-0.5"
+                >Recién llegado</span
+              >
+              <!-- Opacidad al 15% adicional (de 100% a 85% hover o incremento) -->
+              <img
+                src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=400"
+                alt="Ficus"
+                class="w-full h-64 object-cover transition-opacity duration-300 hover:opacity-85"
+              />
+            </div>
+            <div class="mt-4 text-left w-full">
+              <h3 class="font-serif text-lg">Ficus lyrata</h3>
+              <p class="font-bold text-sm">$699.99</p>
+            </div>
+            <button
+              class="mt-4 w-full border border-slate-700 py-2 text-xs hover:bg-black hover:text-white transition"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
+          <div
+            class="bg-[#DFDBD3] p-4 rounded text-center flex flex-col items-center h-full justify-between group"
+          >
+            <div class="w-full relative overflow-hidden">
+              <span
+                class="absolute top-2 left-2 bg-[#4D522B] text-white text-[10px] px-2 py-0.5"
+                >Recién llegado</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400"
+                alt="Maceta"
+                class="w-full h-64 object-cover transition-opacity duration-300 hover:opacity-85"
+              />
+            </div>
+            <div class="mt-4 text-left w-full">
+              <h3 class="font-serif text-lg">Maceta oxidada</h3>
+              <p class="font-bold text-sm">$399.99</p>
+            </div>
+            <button
+              class="mt-4 w-full border border-slate-700 py-2 text-xs hover:bg-black hover:text-white transition"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
+          <div
+            class="bg-[#DFDBD3] p-4 rounded text-center flex flex-col items-center h-full justify-between group"
+          >
+            <div class="w-full relative overflow-hidden">
+              <span
+                class="absolute top-2 left-2 bg-[#4D522B] text-white text-[10px] px-2 py-0.5"
+                >Recién llegado</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400"
+                alt="Cactus"
+                class="w-full h-64 object-cover transition-opacity duration-300 hover:opacity-85"
+              />
+            </div>
+            <div class="mt-4 text-left w-full">
+              <h3 class="font-serif text-lg">Cactus</h3>
+              <p class="font-bold text-sm">$399.99</p>
+            </div>
+            <button
+              class="mt-4 w-full border border-slate-700 py-2 text-xs hover:bg-black hover:text-white transition"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
+          <div
+            class="bg-[#DFDBD3] p-4 rounded text-center flex flex-col items-center h-full justify-between group"
+          >
+            <div class="w-full relative overflow-hidden">
+              <span
+                class="absolute top-2 left-2 bg-[#4D522B] text-white text-[10px] px-2 py-0.5"
+                >Recién llegado</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=400"
+                alt="Cesto"
+                class="w-full h-64 object-cover transition-opacity duration-300 hover:opacity-85"
+              />
+            </div>
+            <div class="mt-4 text-left w-full">
+              <h3 class="font-serif text-lg">Cesto de madera</h3>
+              <p class="font-bold text-sm">$559.99</p>
+            </div>
+            <button
+              class="mt-4 w-full border border-slate-700 py-2 text-xs hover:bg-black hover:text-white transition"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#D3CEC4] text-xs pt-8 pb-4 px-6 mt-10">
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-between gap-6">
+        <div>
+          <h4 class="font-bold mb-2">Tienda</h4>
+          <p>Av. Fray Alcalde 10, Guadalajara, México</p>
+          <p>Tel: +52-1-33-12345678</p>
+          <p>Email: info@misitio.com</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">Enlaces útiles</h4>
+          <p class="cursor-pointer">Comprar todo</p>
+          <p class="cursor-pointer">FAQ</p>
+          <p class="cursor-pointer">Envío y devoluciones</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">Empresa</h4>
+          <p class="cursor-pointer">Nosotros</p>
+          <p class="cursor-pointer">Contáctanos</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
