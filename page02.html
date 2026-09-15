@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 02 - Playas y Ciudades del Perú</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-950 text-white min-h-screen p-6">
+    <!-- Grid principal: 1 fila, 2 columnas en pantallas medianas/grandes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- SECCIÓN A: Top 10 Playas de Perú -->
+      <div class="flex flex-col gap-[10px]">
+        <h2 class="text-xl font-bold mb-2 text-amber-400">
+          Playas Top de Perú (10 Cards)
+        </h2>
+
+        <!-- Contenedor Flexbox para 10 cards con 10px de separación -->
+        <div class="flex flex-wrap gap-[10px]">
+          <!-- Generación simulada de 10 cards -->
+          <!-- Card 1 (Ejemplo representativo repetido 10 veces) -->
+          <script>
+            const playas = [
+              "Máncora",
+              "Punta Sal",
+              "Huanchaco",
+              "Zorritos",
+              "Waikiki",
+              "Tuquillo",
+              "Tortugas",
+              "Colán",
+              "Paita",
+              "Punta Hermosa",
+            ];
+            playas.forEach((playa, i) => {
+              document.write(`
+              <div class="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.33%-10px)] h-[220px] bg-zinc-900 rounded-lg overflow-hidden flex flex-col justify-between shadow-lg border border-zinc-800">
+                <div class="h-[100px] bg-cover bg-center relative" style="background-image: url('https://picsum.photos/300/150?random=${i + 1}')">
+                  <div class="absolute inset-0 bg-black/40 p-2">
+                    <h3 class="text-white font-bold text-sm">Top 10 Playas</h3>
+                  </div>
+                </div>
+                <div class="p-3 text-xs">
+                  <p class="text-gray-400 text-[10px]">Número ${i + 1}</p>
+                  <p class="font-bold text-white text-sm">${playa}</p>
+                  <p class="text-gray-400 text-[11px] truncate">Costa Peruana, Océano Pacífico</p>
+                </div>
+                <div class="px-3 pb-3 flex gap-4 text-[11px] font-semibold text-orange-500">
+                  <button class="hover:text-gray-300 transition-colors uppercase">SHARE</button>
+                  <button class="hover:text-gray-300 transition-colors uppercase">EXPLORE</button>
+                </div>
+              </div>
+            `);
+            });
+          </script>
+        </div>
+      </div>
+
+      <!-- SECCIÓN B: Clima en Ciudades de Perú -->
+      <div class="flex flex-col gap-[5px]">
+        <h2 class="text-xl font-bold mb-2 text-cyan-400">
+          Clima Ciudades de Perú (10 Cards)
+        </h2>
+
+        <!-- Contenedor Flexbox para 10 cards con 5px de separación -->
+        <div class="flex flex-wrap gap-[5px]">
+          <script>
+            const ciudades = [
+              "Lima",
+              "Cusco",
+              "Arequipa",
+              "Trujillo",
+              "Iquitos",
+              "Piura",
+              "Chiclayo",
+              "Huancayo",
+              "Puno",
+              "Tacna",
+            ];
+            ciudades.forEach((ciudad, i) => {
+              document.write(`
+              <div class="w-[250px] h-[200px] bg-zinc-900 rounded-lg p-4 flex flex-col justify-between border border-zinc-800 shadow-md">
+                <div>
+                  <h3 class="font-bold text-base text-white">${ciudad}</h3>
+                  <p class="text-red-400 text-[11px] flex items-center gap-1 mt-0.5">
+                    <span>▲</span> Alerta Climática
+                  </p>
+                </div>
+                
+                <div class="flex items-center justify-between my-1">
+                  <span class="text-3xl font-light text-white">${18 + i}°C</span>
+                  <div class="w-8 h-8 text-rose-500 fill-current">
+                    <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4Z"/></svg>
+                  </div>
+                </div>
+
+                <div class="flex justify-between text-[11px] text-gray-400">
+                  <span>💨 ${15 + i * 2} km/h</span>
+                  <span>🌧️ ${40 + i * 3}%</span>
+                </div>
+
+                <button class="text-left font-semibold text-xs text-white hover:text-gray-400 transition-colors uppercase pt-2 border-t border-zinc-800">
+                  FULL REPORT
+                </button>
+              </div>
+            `);
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
