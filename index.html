@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Principal - 3 Cards Animados</title>
+    <title>Index - 3 Cards Animados y Checkout</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-      /* Estilos 3D para la animación de 180° horizontal y vertical */
       .perspective {
         perspective: 1000px;
       }
@@ -14,12 +16,12 @@
         position: relative;
         width: 100%;
         height: 100%;
-        transition: transform 0.8s;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         transform-style: preserve-3d;
       }
-      /* Giro de 180 grados en X e Y al pasar el cursor */
+      /* Giro horizontal limpio sobre el eje Y */
       .perspective:hover .card-inner {
-        transform: rotateX(180deg) rotateY(180deg);
+        transform: rotateY(180deg);
       }
       .card-front,
       .card-back {
@@ -28,30 +30,24 @@
         height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        border-radius: 1rem;
+        border-radius: 1.5rem;
       }
       .card-back {
-        /* Rotado por defecto para mostrarse al dar la vuelta */
-        transform: rotateX(180deg) rotateY(180deg);
+        transform: rotateY(180deg);
       }
     </style>
   </head>
   <body
-    class="bg-slate-100 min-h-screen flex flex-col justify-center items-center p-6"
+    class="bg-[#f8fafc] min-h-screen flex flex-col items-center justify-center p-6 gap-12"
   >
-    <h1 class="text-3xl font-bold text-slate-800 mb-10 text-center">
-      Diseño web con 3 cards animados
-    </h1>
-
-    <div class="flex flex-wrap justify-center gap-8">
-      <!-- CARD 1 -> page01.html -->
+    <!-- SECCIÓN DE CARDS -->
+    <div class="flex flex-wrap justify-center gap-8 max-w-5xl w-full">
+      <!-- CARD 1 -> page1.html -->
       <a href="page01.html" class="w-64 h-64 perspective">
-        <div class="card-inner shadow-xl">
+        <div class="card-inner shadow-xl hover:shadow-2xl transition-shadow">
           <!-- Frente -->
-          <div
-            class="card-front bg-sky-300 flex items-center justify-center border-4 border-sky-200"
-          >
-            <span class="text-3xl font-bold text-white tracking-wider"
+          <div class="card-front bg-[#84b6f4] flex items-center justify-center">
+            <span class="text-4xl font-semibold text-white tracking-wide"
               >page1</span
             >
           </div>
@@ -59,20 +55,19 @@
           <div
             class="card-back bg-blue-600 flex flex-col items-center justify-center text-white p-4 text-center"
           >
+            <i data-lucide="inbox" class="w-12 h-12 mb-2"></i>
             <span class="text-xl font-bold">Ir a Page 1</span>
-            <p class="text-xs mt-2">Mensajes Inbox</p>
+            <p class="text-xs mt-1 opacity-90">Mensajes Inbox</p>
           </div>
         </div>
       </a>
 
-      <!-- CARD 2 -> page02.html -->
+      <!-- CARD 2 -> page2.html -->
       <a href="page02.html" class="w-64 h-64 perspective">
-        <div class="card-inner shadow-xl">
+        <div class="card-inner shadow-xl hover:shadow-2xl transition-shadow">
           <!-- Frente -->
-          <div
-            class="card-front bg-sky-300 flex items-center justify-center border-4 border-sky-200"
-          >
-            <span class="text-3xl font-bold text-white tracking-wider"
+          <div class="card-front bg-[#84b6f4] flex items-center justify-center">
+            <span class="text-4xl font-semibold text-white tracking-wide"
               >page2</span
             >
           </div>
@@ -80,20 +75,19 @@
           <div
             class="card-back bg-indigo-600 flex flex-col items-center justify-center text-white p-4 text-center"
           >
+            <i data-lucide="sun" class="w-12 h-12 mb-2"></i>
             <span class="text-xl font-bold">Ir a Page 2</span>
-            <p class="text-xs mt-2">Playas y Clima de Perú</p>
+            <p class="text-xs mt-1 opacity-90">Playas y Clima de Perú</p>
           </div>
         </div>
       </a>
 
-      <!-- CARD 3 -> page03.html -->
+      <!-- CARD 3 -> page3.html -->
       <a href="page03.html" class="w-64 h-64 perspective">
-        <div class="card-inner shadow-xl">
+        <div class="card-inner shadow-xl hover:shadow-2xl transition-shadow">
           <!-- Frente -->
-          <div
-            class="card-front bg-sky-300 flex items-center justify-center border-4 border-sky-200"
-          >
-            <span class="text-3xl font-bold text-white tracking-wider"
+          <div class="card-front bg-[#84b6f4] flex items-center justify-center">
+            <span class="text-4xl font-semibold text-white tracking-wide"
               >page3</span
             >
           </div>
@@ -101,11 +95,126 @@
           <div
             class="card-back bg-teal-600 flex flex-col items-center justify-center text-white p-4 text-center"
           >
+            <i data-lucide="sprout" class="w-12 h-12 mb-2"></i>
             <span class="text-xl font-bold">Ir a Page 3</span>
-            <p class="text-xs mt-2">Tienda Plantas</p>
+            <p class="text-xs mt-1 opacity-90">Tienda Plantas</p>
           </div>
         </div>
       </a>
     </div>
+
+    <!-- SECCIÓN INFERIOR: WIDGET ORDER / CHECKOUT -->
+    <div
+      class="w-full max-w-4xl bg-[#1e1e1e] text-gray-200 rounded-sm overflow-hidden shadow-2xl border border-gray-800"
+    >
+      <!-- Top Bar con iconos Lucide -->
+      <div
+        class="bg-[#2d2d2d] px-4 py-2.5 flex justify-end items-center gap-4 text-gray-400 border-b border-gray-700/50"
+      >
+        <button class="hover:text-white transition-colors">
+          <i data-lucide="sun" class="w-4 h-4"></i>
+        </button>
+        <button class="hover:text-white transition-colors">
+          <i data-lucide="filter" class="w-4 h-4"></i>
+        </button>
+        <button class="hover:text-white transition-colors">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+        </button>
+        <button class="hover:text-white transition-colors">
+          <i data-lucide="code" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-8">
+        <!-- Stepper -->
+        <div
+          class="flex items-center justify-between max-w-2xl mx-auto mb-10 text-sm"
+        >
+          <div class="flex items-center gap-2">
+            <span
+              class="w-6 h-6 rounded-full bg-gray-300 text-gray-900 flex items-center justify-center text-xs font-bold"
+              >1</span
+            >
+            <span class="font-medium text-white">Review Order</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-400">
+            <span
+              class="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center text-xs font-semibold"
+              >2</span
+            >
+            <span>Select Shipping</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-400">
+            <span
+              class="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center text-xs font-semibold"
+              >3</span
+            >
+            <span>Submit</span>
+          </div>
+        </div>
+
+        <!-- Order Table -->
+        <div class="bg-[#252525] rounded-sm p-4 border border-gray-800">
+          <h2 class="text-xl font-bold text-white mb-6">Order</h2>
+
+          <div class="w-full text-sm">
+            <!-- Table Header -->
+            <div
+              class="grid grid-cols-3 py-3 border-b border-gray-700 font-semibold text-gray-300"
+            >
+              <div>Description</div>
+              <div class="text-center">Quantity</div>
+              <div class="text-right">Price</div>
+            </div>
+
+            <!-- Row 1 -->
+            <div
+              class="grid grid-cols-3 py-4 border-b border-gray-800/80 items-center"
+            >
+              <div>Product 1</div>
+              <div class="text-center text-gray-400">2</div>
+              <div class="text-right text-gray-400">20</div>
+            </div>
+
+            <!-- Row 2 -->
+            <div
+              class="grid grid-cols-3 py-4 border-b border-gray-800/80 items-center"
+            >
+              <div>Product 2</div>
+              <div class="text-center text-gray-400">10</div>
+              <div class="text-right text-gray-400">150</div>
+            </div>
+
+            <!-- Total Row -->
+            <div
+              class="grid grid-cols-3 pt-5 font-bold text-white items-center"
+            >
+              <div>Total</div>
+              <div></div>
+              <div class="text-right">$170</div>
+            </div>
+          </div>
+
+          <!-- Bottom Actions -->
+          <div class="flex justify-between items-center mt-10">
+            <button
+              class="text-gray-500 font-semibold text-xs tracking-wider uppercase cursor-not-allowed"
+            >
+              Previous
+            </button>
+            <button
+              class="bg-[#3a3a3c] hover:bg-[#4a4a4c] text-white px-5 py-2 rounded text-xs font-semibold tracking-wider uppercase transition-colors"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inicialización de íconos Lucide -->
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>

@@ -13,12 +13,12 @@
 
 ## Backlog
 
-| ID    | Historia de usuario                                                                                 | Responsable | Estado    |
-| ----- | --------------------------------------------------------------------------------------------------- | ----------- | --------- |
-| HU-01 | Como usuario quiero ver una página principal con 3 cards animados que me lleven a las demás páginas | [Nombre 1]  | Terminado |
-| HU-02 | Como usuario quiero ver una lista de mensajes tipo inbox en page01.html                             | [Nombre 1]  | Terminado |
-| HU-03 | Como usuario quiero ver cards informativos de playas y ciudades en page02.html                      | [Nombre 4]  | Terminado |
-| HU-04 | Como usuario quiero ver una página de tienda (page03.html) con diseño responsivo                    | [Nombre 4]  | Terminado |
+| ID    | Historia de usuario                                                                                 | Responsable        | Estado    |
+| ----- | --------------------------------------------------------------------------------------------------- | ------------------ | --------- |
+| HU-01 | Como usuario quiero ver una página principal con 3 cards animados que me lleven a las demás páginas | [vivanco-solano ]  | Terminado |
+| HU-02 | Como usuario quiero ver una lista de mensajes tipo inbox en page01.html                             | [andrade-egoavil ] | Terminado |
+| HU-03 | Como usuario quiero ver cards informativos de playas y ciudades en page02.html                      | [yaranga-ruiz ]    | Terminado |
+| HU-04 | Como usuario quiero ver una página de tienda (page03.html) con diseño responsivo                    | [yaranga-ruiz ]    | Terminado |
 
 ## Funcionalidades por página
 
@@ -47,4 +47,4 @@
 
 ## Repositorio
 
-Link: [pega aquí el link de tu repo en GitHub]
+Link: [https://github.com/Jackeline-VS/practica-calificada-2-web.git]
